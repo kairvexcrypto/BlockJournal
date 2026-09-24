@@ -1,0 +1,31 @@
+name: BlockJournal
+version: '${project.version}'
+main: ru.warndev.blockjournal.BlockJournalPlugin
+api-version: '1.21.11'
+author: Warndev
+description: Searchable block activity journal
+commands:
+  blockjournal:
+    aliases: [bj]
+    description: BlockJournal administration
+    usage: /bj help
+    permission: blockjournal.use
+permissions:
+  blockjournal.use:
+    default: op
+  blockjournal.inspect:
+    default: op
+  blockjournal.lookup:
+    default: op
+  blockjournal.status:
+    default: op
+  blockjournal.admin:
+    default: op
+  blockjournal.*:
+    default: op
+    children:
+      blockjournal.use: true
+      blockjournal.inspect: true
+      blockjournal.lookup: true
+      blockjournal.status: true
+      blockjournal.admin: true
