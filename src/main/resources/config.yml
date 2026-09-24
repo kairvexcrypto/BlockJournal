@@ -1,0 +1,25 @@
+queue:
+  capacity: 20000
+  batch-size: 500
+  flush-millis: 1000
+  max-pending-queries: 16
+storage:
+  retention-days: 30
+  cleanup-batch: 5000
+  spool-max-mib: 128
+lookup:
+  page-size: 8
+  default-hours: 24
+  max-days: 30
+  max-radius: 64
+  cooldown-millis: 1000
+  session-minutes: 5
+inspection:
+  tool: BLAZE_ROD
+capture:
+  place: true
+  break: true
+  explosions: true
+  fire: true
+  max-explosion-blocks: 4096
+  excluded-worlds: []
